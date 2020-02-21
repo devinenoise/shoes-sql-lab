@@ -2,7 +2,7 @@ const request = require('supertest');
 
 describe('GET API/SHOES ', () => {
     test('It should respond with correctly formatted data', async (done) => {
-        const response = await request(`https://rocky-basin-80195.herokuapp.com/`)
+        const response = await request(`https://rocky-basin-80195.herokuapp.com`)
             .get('/api/shoes');
 
         expect(response.body).toEqual({

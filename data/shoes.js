@@ -53,5 +53,28 @@ module.exports = [
         url: 'https://5.imimg.com/data5/JY/FF/OK/SELLER-61168583/nike-epic-react-flyknit-2-shoes-500x500.png',
         brand: 'nike',
         laces: 'true',
+    },
+    {
+        name: 'thermoball',
+        type: 'mid',
+        url: 'https://content.backcountry.com/images/items/900/TNF/TNF03GA/SHTNBLSHGR.jpg',
+        brand: 'The North Face',
+        laces: 'false',
+    },
+    {
+        name: 'Chuck Taylor',
+        type: 'High',
+        url: 'https://c.static-nike.com/a/images/t_PDP_1280_v1/f_auto/ci5qxcnirgtzjpxztmvu/converse-chuck-taylor-all-star-high-top-unisex-shoe-xX439O.jpg',
+        brand: 'Converse',
+        laces: 'true'
+    },
+    {
+        name: 'Speed Trainer',
+        type: 'mid',
+        url: 'https://stockx-360.imgix.net/Balenciaga-Speed-Trainer-Black-White/Images/Balenciaga-Speed-Trainer-Black-White/Lv2/img01.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1579298154',
+        brand: 'Balenciaga',
+        laces: 'false',
     }
+
+
 ];
