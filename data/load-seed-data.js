@@ -24,7 +24,7 @@ async function run() {
                     VALUES ($1, $2, $3, $4, $5);
                 `,
                     // Second argument is an array of values for each parameter in the query:
-                    [shoe.name, shoe.type, shoe.url, shoe.brand, shoe.laces]);
+                [shoe.name, shoe.type, shoe.url, shoe.brand, shoe.laces]);
 
             })
         );

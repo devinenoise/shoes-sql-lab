@@ -54,4 +54,4 @@ module.exports = [
         brand: 'nike',
         laces: 'true',
     }
-]
+];
