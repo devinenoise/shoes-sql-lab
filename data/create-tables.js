@@ -19,10 +19,15 @@ async function run() {
 
         // run a query to create tables
         await client.query(`
-            CREATE TABLE shoes (
+        CREATE TABLE types (
+            id SERIAL PRIMARY KEY NOT NULL,
+            name VARCHAR(256) NOT NULL
+        );
+
+        CREATE TABLE shoes (
                 id SERIAL PRIMARY KEY NOT NULL,
                 name VARCHAR(256) NOT NULL,
-                type VARCHAR(256) NOT NULL,
+                type_id INTEGER NOT NULL REFERENCES types(id),
                 url VARCHAR(256) NOT NULL,
                 brand VARCHAR(256) NOT NULL,
                 laces BOOLEAN NOT NULL

@@ -63,7 +63,7 @@ module.exports = [
     },
     {
         name: 'Chuck Taylor',
-        type: 'High',
+        type: 'high',
         url: 'https://c.static-nike.com/a/images/t_PDP_1280_v1/f_auto/ci5qxcnirgtzjpxztmvu/converse-chuck-taylor-all-star-high-top-unisex-shoe-xX439O.jpg',
         brand: 'Converse',
         laces: 'true'
