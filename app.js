@@ -42,7 +42,6 @@ app.get('/api/shoes', async (req, res) => {
 app.post('/api/shoes', async (req, res) => {
     // using req.body instead of req.params or req.query (which belong to /GET requests)
     try {
-        console.log(req.body);
         const result = await client.query(`
             INSERT INTO shoes (name, type_id, url, brand, laces)
             VALUES ($1, $2, $3, $4, $5)
