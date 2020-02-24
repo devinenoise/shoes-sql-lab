@@ -43,7 +43,7 @@ module.exports = [
         laces: 'true',
     }, {
         name: 'finger shoes',
-        type: 'glove',
+        type: 'Glove',
         url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Vibram_Five_Finger_Shoes.jpg/1200px-Vibram_Five_Finger_Shoes.jpg',
         brand: 'finger',
         laces: 'false',
