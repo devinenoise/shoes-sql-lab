@@ -23,7 +23,7 @@ app.use(cors()); // enable CORS request
 app.get('/api/shoes', async (req, res) => {
     try {
         const result = await client.query(`
-            SELECT shoes.*, type.name AS type
+            SELECT shoes.*, types.name AS type
             FROM shoes 
             JOIN types
             ON shoes.type_id = types.id;`);
