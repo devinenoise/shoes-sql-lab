@@ -24,7 +24,7 @@ app.get('/api/shoes', async (req, res) => {
     try {
         const result = await client.query(`
             SELECT shoes.*, type.name AS type
-            From shoes 
+            FROM shoes 
             JOIN types
             ON shoe.type_id = types.id;`);
         res.json(result.rows);
