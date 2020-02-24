@@ -66,7 +66,7 @@ app.get('/api/shoes/:shoeId', async (req, res) => {
     try {
 
         const result = await client.query(
-            `SELECT * from shoes WHERE shoes.id=$1, [req.params.shoeId]`);
+            `SELECT * from shoes WHERE shoes.id=$1`, [req.params.shoeId]);
 
         res.json(result.rows);
     }
