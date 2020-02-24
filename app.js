@@ -26,7 +26,7 @@ app.get('/api/shoes', async (req, res) => {
             SELECT shoes.*, type.name AS type
             FROM shoes 
             JOIN types
-            ON shoe.type_id = types.id;`);
+            ON shoes.type_id = types.id;`);
         res.json(result.rows);
     }
     catch (err) {
