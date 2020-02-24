@@ -62,11 +62,11 @@ app.post('/api/shoes', async (req, res) => {
 
 // shoes search query by id
 // LOOK AT shoe instead of shoes on Monday
-app.get('/api/shoe/:shoeid', async (req, res) => {
+app.get('/api/shoe/:shoeId', async (req, res) => {
     try {
 
         const result = await client.query(
-            `SELECT * from shoes WHERE shoes.id=$1, [req.params.shoeid]`);
+            `SELECT * from shoes WHERE shoes.id=$1, [req.params.shoeId]`);
 
         res.json(result.rows);
     }
