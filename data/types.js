@@ -1,6 +1,6 @@
 module.exports = [
-    'High',
-    'Mid',
-    'Low',
-    'Glove'
+    'high',
+    'mid',
+    'low',
+    'glove'
 ];

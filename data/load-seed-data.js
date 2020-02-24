@@ -36,6 +36,7 @@ async function run() {
                 // Find the corresponding type id
                 // find the id of the matching shoe type!
                 const type = savedTypes.find(type => {
+                    console.log(type);
                     return type.name === shoe.type;
                 });
 
