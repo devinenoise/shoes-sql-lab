@@ -59,6 +59,30 @@ app.post('/api/shoes', async (req, res) => {
     }
 });
 
+app.put('/api/shoes', async (req, res) => {
+    // using req.body instead of req.params or req.query (which belong to /GET requests)
+    try {
+        // make a new shoe out of the shoe that comes in req.body;
+        const result = await client.query(`
+            UPDATE shoes
+            SET name = '${req.body.name}', 
+                laces = '${req.body.laces}', 
+                brand = '${req.body.brand}', 
+                type_id = '${req.body.typeId}', 
+                url = '${req.body.url}'
+            WHERE id = ${req.body.id};
+        `,
+        );
+        res.json(result.rows[0]); // return just the first result of our query
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json({
+            error: err.message || err
+        });
+    }
+});
+
 // shoes search query by id
 // LOOK AT shoe instead of shoes on Monday
 app.get('/api/shoes/:shoeId', async (req, res) => {
@@ -85,6 +109,21 @@ app.get('/api/types', async (req, res) => {
         res.json(result.rows);
     }
     catch (err) {
+        res.status(500).json({
+            error: err.message || err
+        });
+    }
+});
+
+app.delete('/api/shoes/:shoeId', async (req, res) => {
+    try {
+        const result = await client.query(`
+        DELETE FROM shoes where id = ${req.params.shoeId} 
+        `);
+        res.json(result.rows);
+    }
+    catch (err) {
+        console.log(err);
         res.status(500).json({
             error: err.message || err
         });
