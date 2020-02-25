@@ -63,6 +63,7 @@ app.put('/api/shoes', async (req, res) => {
     // using req.body instead of req.params or req.query (which belong to /GET requests)
     try {
         // make a new shoe out of the shoe that comes in req.body;
+        console.log(req.body);
         const result = await client.query(`
             UPDATE shoes
             SET name = ${req.body.name}, 
