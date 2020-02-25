@@ -64,6 +64,13 @@ app.put('/api/shoes', async (req, res) => {
     try {
         // make a new shoe out of the shoe that comes in req.body;
         console.log(req.body);
+        console.log(`UPDATE shoes
+        SET name='${req.body.name}', 
+            laces=${req.body.laces}, 
+            brand='${req.body.brand}', 
+            type_id=${req.body.typeId}, 
+            url='${req.body.url}'
+        WHERE id=${req.body.id};`)
         const result = await client.query(`
             UPDATE shoes
             SET name='${req.body.name}', 
